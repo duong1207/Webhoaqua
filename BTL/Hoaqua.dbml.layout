@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.25, 9.625" name="Hoaqua">
+  <DataContextMoniker Name="/HoaquaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ed054016-e02f-4801-9fe4-c9f409064df5" absoluteBounds="2.375, 6.125, 2.5, 1.5785953776041666">
+      <DataClassMoniker Name="/HoaquaDataContext/Calamviec" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff4303a8-8279-4023-9f94-5ebb8deab4ef" absoluteBounds="2.39, 6.585, 2.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b15f5906-2a80-4ec1-b51a-a559179d4137" absoluteBounds="2.75, 3.125, 2.5, 1.193992513020834">
+      <DataClassMoniker Name="/HoaquaDataContext/Chitietcalam" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0620a82c-3a90-40fd-98ac-ee40cf8aad8f" absoluteBounds="2.7649999999999997, 3.585, 2.4699999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32e5e68d-f646-4a7a-950c-d3cadfd9ca89" absoluteBounds="5.75, 0.5, 2.5, 1.5785953776041666">
+      <DataClassMoniker Name="/HoaquaDataContext/Hoadonban" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d22fdad8-f5b0-4a91-80f9-193b4eb79b1b" absoluteBounds="5.765, 0.96, 2.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="31d0692f-cf00-4821-820b-60cc09e02326" absoluteBounds="5.75, 6.5, 2.5, 1.5785953776041666">
+      <DataClassMoniker Name="/HoaquaDataContext/HoaDonNhap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d05151e-29b6-48be-8eef-dd98dac67fb3" absoluteBounds="5.765, 6.96, 2.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9be40fa-8517-44e0-b4fd-ad8286ec9b1a" absoluteBounds="2.625, 0.5, 2.5, 1.5785953776041666">
+      <DataClassMoniker Name="/HoaquaDataContext/Khachhang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf27cf8a-77ba-4988-b989-542fb05c0ce7" absoluteBounds="2.64, 0.96, 2.4699999999999998, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="07c113b7-c506-49f7-98be-780a174a97c8" absoluteBounds="13.5, 2.625, 2.5, 1.1939925130208344">
+      <DataClassMoniker Name="/HoaquaDataContext/Loaihoaqua" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc379a85-6592-4ec8-934f-d527d3041e91" absoluteBounds="13.515, 3.0850000000000009, 2.4699999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b857c48-a588-4114-923f-c95f109ad7d9" absoluteBounds="5.125, 8.625, 2.5, 0.8093896484375005">
+      <DataClassMoniker Name="/HoaquaDataContext/Nhacungcap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd13a849-30f8-4c96-ba23-954fb409ff5f" isExpanded="false" absoluteBounds="5.1400000000000006, 9.085, 2.4699999999999998, 0.2493896484375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8fd3e24a-1526-416f-aed0-21e133c0b24d" absoluteBounds="6.625, 3.625, 2.5, 1.9631982421875005">
+      <DataClassMoniker Name="/HoaquaDataContext/Nhanvien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e2bf70e-d8fc-47ad-8c08-be5193154306" absoluteBounds="6.6400000000000006, 4.085, 2.4699999999999998, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.8125 : 6.125); (3.8125 : 4.31899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HoaquaDataContext/Calamviec/Calamviec_Chitietcalam" />
+      <nodes>
+        <classShapeMoniker Id="ed054016-e02f-4801-9fe4-c9f409064df5" />
+        <classShapeMoniker Id="b15f5906-2a80-4ec1-b51a-a559179d4137" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.125 : 1.28929768880208); (5.75 : 1.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HoaquaDataContext/Khachhang/Khachhang_Hoadonban" />
+      <nodes>
+        <classShapeMoniker Id="e9be40fa-8517-44e0-b4fd-ad8286ec9b1a" />
+        <classShapeMoniker Id="32e5e68d-f646-4a7a-950c-d3cadfd9ca89" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.625 : 8.85653299790642); (7.9375005 : 8.85653299790642); (7.9375005 : 8.07859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HoaquaDataContext/Nhacungcap/Nhacungcap_HoaDonNhap" />
+      <nodes>
+        <classShapeMoniker Id="6b857c48-a588-4114-923f-c95f109ad7d9" />
+        <classShapeMoniker Id="31d0692f-cf00-4821-820b-60cc09e02326" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.625 : 3.97199625651042); (5.25 : 3.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HoaquaDataContext/Nhanvien/Nhanvien_Chitietcalam" />
+      <nodes>
+        <classShapeMoniker Id="8fd3e24a-1526-416f-aed0-21e133c0b24d" />
+        <classShapeMoniker Id="b15f5906-2a80-4ec1-b51a-a559179d4137" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.4375 : 3.625); (7.4375 : 2.07859537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HoaquaDataContext/Nhanvien/Nhanvien_Hoadonban" />
+      <nodes>
+        <classShapeMoniker Id="8fd3e24a-1526-416f-aed0-21e133c0b24d" />
+        <classShapeMoniker Id="32e5e68d-f646-4a7a-950c-d3cadfd9ca89" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.4375 : 5.5881982421875); (7.4375 : 6.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HoaquaDataContext/Nhanvien/Nhanvien_HoaDonNhap" />
+      <nodes>
+        <classShapeMoniker Id="8fd3e24a-1526-416f-aed0-21e133c0b24d" />
+        <classShapeMoniker Id="31d0692f-cf00-4821-820b-60cc09e02326" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0515a15f-a50a-43b7-9853-19fd6c11db61" absoluteBounds="10.75, 6.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/HoaquaDataContext/hoaqua" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6210e4ae-df48-4577-bc92-e0fee2eb4b89" absoluteBounds="10.765, 6.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6612de45-572a-4a94-8735-4d273f97750b" absoluteBounds="10.625, 1.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HoaquaDataContext/ChiTietHDN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3689d7d6-f454-4d3b-97f8-4d16c7c725b1" absoluteBounds="10.64, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.09375 : 6.25); (12.09375 : 2.7612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HoaquaDataContext/hoaqua/hoaqua_ChiTietHDN" />
+      <nodes>
+        <classShapeMoniker Id="0515a15f-a50a-43b7-9853-19fd6c11db61" />
+        <classShapeMoniker Id="6612de45-572a-4a94-8735-4d273f97750b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 7.28929768880208); (10.5 : 7.28929768880208); (10.5 : 6); (11.0963534166667 : 6 : JumpStart); (11.2630200833333 : 6 : JumpEnd); (11.4843725 : 6); (11.4843725 : 2.7612939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HoaquaDataContext/HoaDonNhap/HoaDonNhap_ChiTietHDN" />
+      <nodes>
+        <classShapeMoniker Id="31d0692f-cf00-4821-820b-60cc09e02326" />
+        <classShapeMoniker Id="6612de45-572a-4a94-8735-4d273f97750b" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c5c10271-754c-4e84-b74e-620fce98796b" absoluteBounds="8.875, 3.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HoaquaDataContext/ChitietHDB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f7810a3-8182-4802-8785-0e40d8c1f3cf" absoluteBounds="8.89, 3.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.17968675 : 6.25); (11.17968675 : 4.03929768880208); (10.875 : 4.03929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HoaquaDataContext/hoaqua/hoaqua_ChitietHDB" />
+      <nodes>
+        <classShapeMoniker Id="0515a15f-a50a-43b7-9853-19fd6c11db61" />
+        <classShapeMoniker Id="c5c10271-754c-4e84-b74e-620fce98796b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.15625 : 2.07859537760417); (6.15625 : 3.40625); (7.35416666666667 : 3.40625 : JumpStart); (7.52083333333333 : 3.40625 : JumpEnd); (8.875 : 3.40625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HoaquaDataContext/Hoadonban/Hoadonban_ChitietHDB" />
+      <nodes>
+        <classShapeMoniker Id="32e5e68d-f646-4a7a-950c-d3cadfd9ca89" />
+        <classShapeMoniker Id="c5c10271-754c-4e84-b74e-620fce98796b" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

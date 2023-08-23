@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "Hoaqua";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+
+@* <script type="text/javascript">
+        //Hàm lấy Thêm mới Khách hàng. Dùng $.ajax() thực hiện method HTTPPOST
+        function insertHoaqua() {
+            var url = 'https://localhost:44358/api/Hoaqua?id=' +
+                $('input').eq(0).val() + '&name=' + $('input').eq(1).val() +
+                '&loaihq=' + $('input').eq(2).val() + '&dongiaban=' +
+                $('input').eq(3).val() + '&dongianhap=' + $('input').eq(4).val() + '&anh=' + $('input').eq(5).val() + '&mota=' + $('input').eq(6).val() + '&trongluong=' + $('input').eq(7).val();
+            $.ajax({
+                url: url,
+                method: 'POST',
+                contentType: 'json',
+                dataType: 'json',
+                error: function (response) {
+                    alert("Thêm mới không thành công");
+
+                },
+                success: function (reponse) {
+                    alert("Thêm mới thành công");
+                    GetAllCustomers();
+
+                }
+            });
+        }
+
+    </script>*@
+
+
+<script type="text/javascript">
+    //Hàm lấy Thêm mới Khách hàng. Dùng $.ajax() thực hiện method HTTPPOST
+    function insertHoaqua() {
+        var fileInput = document.getElementById('Anh');
+        var mahq = document.getElementById('id').value;
+        var ten = document.getElementById('name').value;
+        var ml = document.getElementById('loaihq').value;
+        var dgb = document.getElementById('dongiaban').value;
+        var dgn = document.getElementById('dongianhap').value;
+        var mota = document.getElementById('mota').value;
+        var tl = document.getElementById('trongluong').value;
+
+        var fileName = fileInput.files[0].name;
+        var url = 'https://localhost:44358/api/Hoaqua?id=' + mahq + '&name=' + ten + '&loaihq=' + ml + '&dongiaban=' + dgb + '&dongianhap='
+            + dgn + '&anh=' + fileName + '&mota=' + mota + '&trongluong=' + tl;
+        $.ajax({
+            url: url,
+            method: 'POST',
+            contentType: 'json',
+            dataType: 'json',
+            error: function (response) {
+                alert("Thêm mới không thành công");
+
+            },
+            success: function (reponse) {
+                alert("Thêm mới thành công");
+                GetAllCustomers();
+
+            }
+        });
+    }
+
+</script>
+
+
+
+   
+
+    <div class="container">
+        <table style="border:none">
+            <tbody>
+                <tr>
+                    <td style="width:150px">Mã Hoa Quả: </td>
+                    <td>
+                        <input id="id" type="text" name="Mahoaqua"
+                               placeholder="Mã hoa quả" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:30px">Tên Hoa Quả: </td>
+                    <td>
+                        <input id="name" type="text" name="tenhoaqua" placeholder="Tên Hoa Quả" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mã Loại: </td>
+                    <td>
+                        <input id="loaihq" type="text" name="maloai"
+                               placeholder="Mã loại" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Đơn giá bán: </td>
+                    <td>
+                        <input id="dongiaban" type="text" name="giaban"
+                               placeholder="Đơn giá bán" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Đơn giá nhập: </td>
+                    <td>
+                        <input id="dongianhap" type="text" name="gianhap"
+                               placeholder="Đơn giá nhập" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mô tả </td>
+                    <td>
+                        <input id="mota" type="text" name="mota"
+                               placeholder="Mô tả sản phẩm" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ảnh  </td>
+                    <td>
+                        <input id="Anh" type="file" name="anh"
+                               placeholder="Mô tả sản phẩm" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Trọng lượng  </td>
+                    <td>
+                        <input id="trongluong" type="text" name="truongluong"
+                               placeholder="Trọng lượng sản phẩm" />
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <button class="btn-primary update-button"
+                                onclick="insertHoaqua();">
+                            Thêm mới
+                        </button>
+                    </td>
+                    <td>
+                        <a class=" btn btn-danger rounded" href="@Url.Action("Index", "Hoaqua")">Trang Chủ</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   
+
+
+
+

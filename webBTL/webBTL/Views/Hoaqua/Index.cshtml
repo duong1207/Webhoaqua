@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+<div> <a class=" btn btn-danger rounded" href="@Url.Action("Hoaqua", "Hoaqua")">Thêm mới</a></div>
+
+<div class="row featured__filter" id="allKH">
+
+</div>
+
+
+
+<script type="text/javascript">
+    $('#allKH').on('click', '.hovered .xoa', function () {
+        var id = $('.hovered .xoa').data('id');
+        //alert(id);
+        // Lưu ID sản phẩm vào sessionStorage để truyền sang trang sửa dữ liệu
+      //  sessionStorage.setItem('id_san_pham_xoa', id);
+        // Chuyển đến trang sửa dữ liệu
+        $.ajax({
+            url: 'https://localhost:44358/api/Hoaqua?mahoaqua=' + id,
+            method: 'DELETE',
+            contentType: 'json',
+            dataType: 'json',
+            error: function (reponse) {
+                alert("Xóa không thành công");
+            },
+            success: function (reponse) {
+                alert("Xóa thành công");
+                GetAllCustomers();
+            }
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            GetAllCustomers();
+        });
+
+        function GetAllCustomers() {
+            $.ajax({
+                url: 'https://localhost:44358/api/Hoaqua/', // sửa lại đường dẫn để gọi dữ liệu từ tblKhach
+                method: 'GET',
+                contentType: 'json',
+                dataType: 'json',
+                error: function (reponse) {
+                    alert("loi");
+                },
+                success: function (reponse) {
+                    const len = reponse.length;
+                    @*console.log(reponse);*@
+                    let table = '';
+                    for (var i = 0; i < len; ++i) {
+
+                        table = table + '<div  class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables myclass">';
+                        table = table + '<div class="featured__item">';
+                        table = table + '<img class="featured__item__pic set-bg" src="../Img/'+ reponse[i].Anh +'">';
+                        //table = table + <button class="btn-primary update-button"
+                        //  onclick="DeleteHoaqua();">Xóa </button>;
+
+                        table = table + '</div>';
+                        table = table + '<div class="featured__item__text">';
+                        table = table + '<h6><a href="#">' + reponse[i].Tenhoaqua + '</a></h6>';
+                        table = table + '<h5>' + reponse[i].dongiaban + '</h5>';
+                        table = table + '<button class="btn-primary update-button xoa" data-id="' + reponse[i].mahoaqua + '">Xóa</button>';
+                        table = table + '<div> <a class=" btn btn-danger rounded" href="@Url.Action("sua", "Hoaqua")">Sửa</a></div>';
+
+                        table = table + '</div>';
+                        table = table + '</div> ';
+                        table = table + '</div>';
+
+                    }
+                    document.getElementById('allKH').innerHTML = table;
+                },
+                fail: function (response) {
+                }
+            });
+        }
+
+</script>
+
+
+@*<script>
+    function DeleteHoaqua() {
+        var maDL = $('#txtMDL1').val(); // Lấy mã đại lý từ input
+        if (maDL) { // Nếu mã đại lý không rỗng
+            $.ajax({
+                url: 'https://localhost:44358/api/Hoaqua/' + maDL, // Đường dẫn tới API xóa đại lý với mã tương ứng
+                type: 'DELETE',
+                success: function (result) {
+                    alert('Xóa đại lý thành công!');
+                    GetAllCustomers();
+                },
+                error: function (xhr, status, error) {
+                    alert(xhr.responseText);
+                }
+            });
+        } else {
+            alert('Vui lòng nhập mã đại lý cần xóa!');
+        }
+    }
+    </script>
+*@
+
